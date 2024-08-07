@@ -2,8 +2,7 @@
 
 An iOS/iPadOS Jailbreak for all A7-A11 devices based on checkm8 exploit
  
-For libusb errors, refer to this guide: ["Click here"]
-(https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
+For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
 
 # Testers
 <a href= https://github.com/BananeRapeuse/litera1n/blob/main/testers.md>Testers</a>
