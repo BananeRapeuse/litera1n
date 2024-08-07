@@ -1,6 +1,6 @@
 # litera1n
 
-An iOS/iPadOS Jailbreak for all A7-A11 devices based on checkm8 exploit
+An iOS/iPadOS Jailbreak for all A5-A11 devices based on checkm8 exploit
  
 For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
 
