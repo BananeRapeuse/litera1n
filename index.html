@@ -1,14 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script src="https://pyodide-cdn2.iodide.io/v0.15.0/full/pyodide.js"></script>
-<script>
-   // init environment
-  languagePluginLoader
-    // then run Python code
-    .then(() => console.log(pyodide.runPython(`import os; os.system(python ipwndfu -p)`)));
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact form label {
+            margin-top: 10px;
+        }
+
+        #contact form input, #contact form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        #contact form button {
+            margin-top: 10px;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Bienvenue sur Mon Projet</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Caractéristiques</a></li>
+                <li><a href="#download">Télécharger</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="features">
+        <h2>Caractéristiques</h2>
+        <p>Mon projet offre les fonctionnalités suivantes...</p>
+    </section>
+    <section id="download">
+        <h2>Télécharger</h2>
+        <p><a href="lien_de_telechargement">Télécharger ici</a></p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Mon Projet. Tous droits réservés.</p>
+    </footer>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Merci pour votre message !');
+        });
+    </script>
 </body>
 </html>
