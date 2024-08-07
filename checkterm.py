@@ -1,5 +1,5 @@
 import os
-print("Welcome to the checkra1n.py terminal")
+print("Welcome to the litera1n terminal")
 print("Type help for all the commands")
 console = "$ "
 while console != "exit":
