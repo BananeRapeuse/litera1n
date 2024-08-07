@@ -6,7 +6,7 @@ from tkinter import *
 
 window=Tk()
 
-window.title("Checkra1n.py")
+window.title("litera1n")
 window.geometry('1800x1800')
 
 def run():
@@ -53,7 +53,7 @@ class Clock(Frame):
         Window.label.configure(text=now)
         Window.after(1000, Window.update_clock)
 
-load = PIL.Image.open("checkra1n.png")
+load = PIL.Image.open("litera1n.png")
 render = PIL.ImageTk.PhotoImage(load)
 img = Label(window, image=render)
 img.image = render
