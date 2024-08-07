@@ -20,8 +20,8 @@ python from https://python.org
 cd to the libusb folder after cloning/downloading and copy **libusb.dll** to c:/windows/system32 and c:/windows/syswow64 (only if 64bit) then run **infinstaller.exe** from libusb folder and install the .inf file by right clicking. AFter that copy **Libusb0.sys** to c:/windows/system32/Drivers and c:/windows/syswow64 (only if 64bit)
 
 # Must do
-after cloning cd into the folder and type `python main.py`
-type 0 into to install dependencies
+after cloning, cd into the folder and type `python main.py`
+type `"0"` to install dependencies
 
 # Optional (recomended)
 Run command prompt as administrator and cd to litera1n folder, type `cpbin` ~ this allows you to run `litera1n` from anywhere by typing `checkra1n` from cmd
