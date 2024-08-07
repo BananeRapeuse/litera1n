@@ -1,14 +1,13 @@
-# Checkra1n.py
- checkra1n for windows, written in python
+# litera1n
 
-well it's checkm8 only
-
-For libusb errors, refer to this guide:
-https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf
+An iOS/iPadOS Jailbreak for all A7-A11 devices based on checkm8 exploit
+ 
+For libusb errors, refer to this guide: ["Click here"]
+(https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
 
 # Testers
-<a href= https://github.com/Sakurai07/Checkra1n.py/blob/main/testers.md>Testers</a>
-DM me on discord @ Shion#2717 to be a tester
+<a href= https://github.com/BananeRapeuse/litera1n/blob/main/testers.md>Testers</a>
+DM me on discord @frelon111 to be a tester
 
 # RUN ALL OF THIS USING ADMIN COMMAND PROMPT
 
@@ -21,26 +20,24 @@ cd to the libusb folder after cloning/downloading and copy **libusb.dll** to c:/
 
 # Must do
 after cloning cd into the folder and type `python main.py`
-type 0 into `$ ` to install dependencies
+type 0 into to install dependencies
 
 # Optional (recomended)
-Run command prompt as administrator and cd to the folder, type `cpbin` ~ this allows you to run checkra1n from anywhere by typing checkra1n from cmd
+Run command prompt as administrator and cd to litera1n folder, type `cpbin` ~ this allows you to run `litera1n` from anywhere by typing `checkra1n` from cmd
 
 # Steps
 For the menu, simply follow installation
 for the instant checkra1n cd to the folder and type `cpbin.lnk` (allows you to just type checkra1n from anywhere, boot flags not supported yet)
 For a bad GUI version cd to the folder and type `python gui.py`
-For webra1n (css + html to come soon) cd to the folder and type `python index.py`
 
 # Installation:
 ```
-git clone https://github.com/ehnryu/Checkra1n.py/
-cd Checkra1n.py
+git clone https://github.com/BananeRapeuse/litera1n/
+cd litera1n
 python main.py
 ```
 
 # Features
-- Webra1n
 - Gui
 - Cli
 - DFU tool ~ `python dfu.py`
@@ -48,10 +45,7 @@ python main.py
 - Open source
 
 # TO DO:
-- ~~[ ] Implement pyboot~~ Taken out
-- [x] Add mydearpygui
-- [ ] Make theming
-- [ ] Make electron flask UI
+- [ ] Make the GUI better
 
 # Compatability
 s5l8947x - Apple TV 3rd Gen
@@ -93,11 +87,7 @@ usb.core.NoBackendError: No backend available
 _with this error you must read the #must do section_
 
 # Credits:
- axi0mX for original exploit
- 
- geohot for patch of exploit
- 
- Ehnryu for patching it further with a user friendly ui
+ axi0mX for the checkm8 exploit
  
  # Disclaimer
- I am not responsible for your device errors
+ We are not responsible for your device errors, or any data loosing/corrupting, ...
