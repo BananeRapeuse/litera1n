@@ -6,7 +6,7 @@ from tkinter import *
 
 window=Tk()
 
-window.title("Checkra1n.py")
+window.title("litera1n")
 window.geometry('1800x1800')
 
 def run():
