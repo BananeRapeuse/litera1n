@@ -23,7 +23,7 @@ cd to the libusb folder after cloning/downloading and copy **libusb.dll** to c:/
 
 With iPhone 8/8+ or X, you **must** disable passcode before jailbreak !
 
-(Settings: TouchID/FaceID and code --> disable the code)
+(Settings: TouchID/FaceID and code ----> disable the code)
 
 # Must do
 after cloning, cd into the folder and type `python main.py`
