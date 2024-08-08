@@ -21,12 +21,10 @@ python from https://python.org
 ### IMPORTANT
 cd to the libusb folder after cloning/downloading and copy **libusb.dll** to c:/windows/system32 and c:/windows/syswow64 (only if 64bit) then run **infinstaller.exe** from libusb folder and install the .inf file by right clicking. AFter that copy **Libusb0.sys** to c:/windows/system32/Drivers and c:/windows/syswow64 (only if 64bit)
 
-With iPhone 8/8+ or X, you **must** disable passcode before jailbreak !
-
-(Settings: TouchID/FaceID and code ----> disable the code)
-
 # Must do
-after cloning, cd into the folder and type `python main.py`
+- With iPhone 8/8+ or X, you **must** disable passcode before jailbreak ! (Settings: TouchID/FaceID and code ----> disable the code)
+
+- after cloning, cd into the folder and type `python main.py`
 type `"0"` to install dependencies
 
 # Optional (recomended)
