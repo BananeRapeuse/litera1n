@@ -26,17 +26,14 @@
             height: 50px;
         }
 
-        nav a, nav button {
+        nav a {
             color: #e5e5e5;
             text-decoration: none;
             margin-left: 2rem;
             font-size: 1.2rem;
-            background: none;
-            border: none;
-            cursor: pointer;
         }
 
-        nav a:hover, nav button:hover {
+        nav a:hover {
             color: #007bff;
         }
 
@@ -102,25 +99,19 @@
             font-size: 1.2rem;
         }
 
-        .about-text {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            border: 1px solid #333;
-            border-radius: 10px;
-            background-color: #2a2a2a;
-            display: none; /* Initially hidden */
-        }
-
-        .about-text p {
-            text-align: left;
-            margin-bottom: 1rem;
-        }
-
-        .about-text h2 {
+        .features p {
+            font-size: 0.9rem;
+            margin-top: 1rem;
             text-align: center;
-            margin-bottom: 1rem;
-            font-size: 2rem;
+        }
+
+        .features p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .features p a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -153,12 +144,12 @@
         <img src="https://github.com/BananeRapeuse/litera1n/raw/main/litera1n.png" alt="litera1n logo">
         <nav>
             <a href="#features">Features</a>
-            <button id="about-btn">About</button>
+            <a href="about.html">About</a>
             <a href="#support">Support</a>
         </nav>
     </header>
     <main class="main-content">
-        <h1>Welcome to litera1n official website !</h1>
+        <h1>Welcome to litera1n official website!</h1>
         <p>The ultimate jailbreaking tool for your iOS device. Download now and unlock the full potential of your device.</p>
         <div class="buttons">
             <a href="https://github.com/BananeRapeuse/litera1n/releases" target="_blank">Download for Windows</a>
@@ -172,25 +163,11 @@
                 <li>Support for iPhone, iPad and iPod touch</li>
                 <li>Support for iOS/iPadOS 5.0 to 18.0 beta 5*</li>
             </ul>
-            <p style="font-size: 0.9rem; margin-top: 1rem;">*The iOS/iPadOS support depends on your device (minimum is iPhone 4s on iOS 5.0 and the maximum is the iPad 7th gen on iPadOS 18.0 beta 5). <a href="https://github.com/BananeRapeuse/litera1n/blob/main/README.md#compatability" target="_blank" style="color: #007bff;">Check compatibility</a></p>
-        </section>
-        <section class="about-text" id="about">
-            <h2>About litera1n</h2>
-            <p>litera1n is a cutting-edge jailbreak tool designed exclusively for Windows, providing users with the power to unlock the full potential of their iOS devices. This tool is meticulously coded in Python, ensuring a robust and efficient user experience. At the heart of litera1n lies the powerful checkm8 exploit, a low-level bootrom exploit that fundamentally changes how your device interacts with iOS, enabling root system modifications.</p>
-            <p>The checkm8 exploit, discovered by <a href="https://github.com/axi0mX" target="_blank" style="color: #007bff;">axi0mx</a>, has revolutionized the jailbreaking community by offering a permanent, unpatchable exploit for a wide range of Apple devices. This exploit targets the bootrom (secure boot) of Apple processors, which means it is invulnerable to software updates from Apple, ensuring lasting jailbreak capabilities for supported devices.</p>
-            <p>litera1n uses the checkm8 exploit to support a wide range of Apple devices with processors from the A5 to the A11 chipsets. This includes all iPhone models from the iPhone 4s up to the iPhone X, iPad models from the iPad 2 up to the iPad 7th generation, and iPod Touch models from the iPod Touch 5th generation to the iPod Touch 7th generation. While checkm8 also supports certain Apple TV models, litera1n is currently focused solely on iPhones, iPads, and iPod Touches, but you can also try to jailbreak yours.</p>
-            <p>litera1n’s exclusivity to Windows users is deliberate, offering a streamlined experience tailored to this platform. Although checkm8 is a versatile exploit capable of running on multiple operating systems, there are currently no plans to expand litera1n to macOS or Linux. This decision allows us to concentrate our efforts on providing the best possible performance and user experience for Windows-based jailbreakers.</p>
-            <p>With litera1n, you gain full control over your compatible iOS device, enabling you to install custom software, modify system settings, and enjoy capabilities beyond those allowed by Apple’s standard iOS environment. This is all possible thanks to the foundational checkm8 exploit, a testament to the ingenuity of the jailbreak community and the limitless possibilities it creates for your iOS device.</p>
+            <p>*The iOS/iPadOS support depends on your device (minimum is iPhone 4s on iOS 5.0 and the maximum is the iPad 7th gen on iPadOS 18.0 beta 5). <a href="https://github.com/BananeRapeuse/litera1n/blob/main/README.md#compatability" target="_blank">Check compatibility</a></p>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 litera1n. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
     </footer>
-    <script>
-        document.getElementById("about-btn").addEventListener("click", function() {
-            var aboutSection = document.getElementById("about");
-            aboutSection.style.display = aboutSection.style.display === "none" || aboutSection.style.display === "" ? "block" : "none";
-        });
-    </script>
 </body>
 </html>
