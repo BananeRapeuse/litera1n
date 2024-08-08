@@ -9,7 +9,7 @@ For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/
 We are always in developement but you can also jailbreak (jailbreak is ready to use)
 
 # Testers
-<a href= https://github.com/BananeRapeuse/litera1n/blob/main/testers.md>Testers</a>
+<a href= https://github.com/BananeRapeuse/litera1n/blob/main/testers.md>Testers,</a>
 DM me on discord @frelon111 to be a tester
 
 # RUN ALL OF THIS USING ADMIN COMMAND PROMPT
@@ -51,25 +51,10 @@ python main.py
 - [ ] Make the GUI better
 
 # Compatability
-s5l8947x - Apple TV 3rd Gen
 
-s5l8950x: iPhone 5/5C
-
-s5l8955x: iPad 4th Gen
-
-s5l8960x: iPad Air, iPhone 5S, iPad mini 2, iPad mini 3
-
-t8002: Apple Watch Series 1/2
-
-t8004: Apple Watch Series 3
-
-t8010: iPad 6/7th Gen, iPhone 7, iPhone 7 Plus, iPod Touch 7th Gen
-
-t8011: iPad Pro (10.5 inch), iPad Pro (12.9 inch) 2nd Gen, Apple TV 4k
-
-t8015: iPhone 8/8+, iPhone X
-
-Or anything else that supports the checkm8 exploit
+- iPhone: iPhone 4s --> iPhone X
+- iPad: iPad 2 --> iPad 7th gen
+- iPod Touch: iPod 5th gen --> iPod 7th gen
 
 # Troubleshooting:
 1. restart your computer at least 3 times after installing drivers
