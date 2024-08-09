@@ -13,7 +13,7 @@ while True:
 	print("###########################")
 	print(" ")
 	print(" Please choose an option: ")
-	print("[0] Install dependencies ")
+	print("[0] Install dependencies (YOU MUST)")
 	print("[1] CLI Jailbreak        ")
 	print("[2] GUI Jailbreak        ")
 	print("[3] Github link          ")
@@ -30,7 +30,7 @@ while True:
 	elif choice == "3":
 		print("https://github.com/BananeRapseuse/litera1n")
 	elif choice == "4":
-		print("Go to the github repository or check README.md")
+		os.system("type Jailbreak.md")
 	elif choice == "0":
 		os.system("pip install -r requirements.txt")
 		os.system("install.lnk")
