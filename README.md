@@ -2,7 +2,7 @@
 
 # litera1n
 
-An iOS/iPadOS Jailbreak for all A5-A11 devices based on checkm8 exploit
+An iOS/iPadOS/tvOS Jailbreak for all A5-A11 or T2 or S1P-S3 devices based on checkm8 exploit
  
 For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
 
@@ -59,6 +59,7 @@ python main.py
 - iPhone: iPhone 4s --> iPhone X
 - iPad: iPad 2 --> iPad 7th gen
 - iPod Touch: iPod 5th gen --> iPod 7th gen
+- AplleTV: AppleTV 3th gen --> AppleTV 4k 1st gen
 
 # Troubleshooting:
 1. restart your computer at least 3 times after installing drivers
