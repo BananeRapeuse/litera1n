@@ -56,7 +56,6 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin-bottom: 2rem;
         }
 
         .buttons a {
@@ -72,46 +71,28 @@
             background-color: #0056b3;
         }
 
-        .features {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-            padding: 1rem;
-            border: 1px solid #333;
-            border-radius: 10px;
-            background-color: #2a2a2a;
+        .faq {
+            padding: 2rem;
+            background-color: #1a1a1a;
+            margin-top: 2rem;
+            border-top: 1px solid #333;
         }
 
-        .features h2 {
-            text-align: center;
+        .faq h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
+            color: #fff;
         }
 
-        .features ul {
-            list-style-type: disc;
-            margin: 0;
-            padding: 0 2rem;
+        .faq p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #ccc;
         }
 
-        .features li {
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .features p {
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .features p a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .features p a:hover {
-            text-decoration: underline;
+        .faq p span {
+            font-weight: bold;
+            color: #e5e5e5;
         }
 
         footer {
@@ -119,9 +100,6 @@
             padding: 1rem;
             text-align: center;
             border-top: 1px solid #333;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
 
         footer p {
@@ -141,29 +119,66 @@
 </head>
 <body>
     <header>
-        <img src="https://github.com/BananeRapeuse/litera1n/raw/main/litera1n.png" alt="litera1n logo">
+        <img src="https://github.com/BananeRapeuse/litera1n/raw/main/litera1n.png" alt="litera1n.png">
         <nav>
             <a href="#features">Features</a>
             <a href="about.html">About</a>
-            <a href="#support">Support</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
         </nav>
     </header>
     <main class="main-content">
         <h1>Welcome to litera1n official website!</h1>
         <p>The ultimate jailbreaking tool for your iOS device. Download now and unlock the full potential of your device.</p>
         <div class="buttons">
-            <a href="https://github.com/BananeRapeuse/litera1n/releases" target="_blank">Download for Windows</a>
+            <a href="https://github.com/BananeRapeuse/litera1n/releases">Download for Windows</a>
         </div>
-        <section class="features" id="features">
+        
+        <section class="features">
             <h2>Features</h2>
             <ul>
                 <li>checkm8 exploit</li>
                 <li>A5 - A11 devices jailbreak</li>
                 <li>For Windows (not like palera1n or checkra1n, they are only available for macOS and Linux)</li>
-                <li>Support for iPhone, iPad and iPod touch</li>
+                <li>Support for iPhone, iPad, and iPod touch</li>
                 <li>Support for iOS/iPadOS 5.0 to 18.0 beta 5*</li>
             </ul>
-            <p>*The iOS/iPadOS support depends on your device (minimum is iPhone 4s on iOS 5.0 and the maximum is the iPad 7th gen on iPadOS 18.0 beta 5). <a href="https://github.com/BananeRapeuse/litera1n/blob/main/README.md#compatability" target="_blank">Check compatibility</a></p>
+            <p>*The iOS/iPadOS support depends on your device (minimum is iPhone 4s on iOS 5.0, and the maximum is the iPad 7th gen with iPadOS 18.0 beta 5). <a href="https://github.com/BananeRapeuse/litera1n/blob/main/README.md#compatability">Check compatibility</a></p>
+        </section>
+
+        <section class="faq">
+            <h2>FAQ - litera1n</h2>
+            <p><span>Q: What is litera1n?</span><br>
+            A: litera1n is a jailbreak tool designed exclusively for Windows that uses the checkm8 exploit to unlock the full potential of supported iOS devices. It allows users to install custom software and modify system settings beyond the limitations set by Apple.</p>
+            
+            <p><span>Q: Which devices are supported by litera1n?</span><br>
+            A: litera1n supports iPhone models from the iPhone 4s up to the iPhone X, iPad models from the iPad 2 up to the iPad 7th generation, and iPod Touch models from the iPod Touch 5th generation to the iPod Touch 7th generation. Devices must be running processors from the A5 to the A11 chipsets.</p>
+
+            <p><span>Q: What versions of iOS are supported?</span><br>
+            A: litera1n supports iOS/iPadOS versions from 5.0 up to 18.0 beta 5, depending on the device. Compatibility varies, so please check the specific requirements for your device model.</p>
+
+            <p><span>Q: Why is litera1n only available for Windows?</span><br>
+            A: litera1n is focused on providing the best performance and user experience for Windows-based users. Although the checkm8 exploit is versatile, there are no current plans to expand litera1n to macOS or Linux.</p>
+
+            <p><span>Q: What is the checkm8 exploit?</span><br>
+            A: The checkm8 exploit is a low-level bootrom exploit discovered by axi0mx. It targets the secure boot process in Apple devices with A5 to A11 chipsets, making it unpatchable by software updates. This allows for a permanent jailbreak on supported devices.</p>
+
+            <p><span>Q: Can I use litera1n to jailbreak my Apple TV?</span><br>
+            A: While the checkm8 exploit technically supports certain Apple TV models, litera1n is currently designed to jailbreak iPhones, iPads, and iPod Touches. Support for Apple TV is not included at this time (but you can also try to jailbreak yours).</p>
+
+            <p><span>Q: Is jailbreaking legal?</span><br>
+            A: Jailbreaking is legal in many countries, but it may void your device’s warranty and can expose your device to security risks. Always ensure you understand the implications of jailbreaking before proceeding.</p>
+
+            <p><span>Q: Will using litera1n erase my data?</span><br>
+            A: Jailbreaking with litera1n should not erase your data, but it is highly recommended to back up your device before starting the jailbreak process in case of unexpected issues.</p>
+
+            <p><span>Q: How can I report a bug or get support?</span><br>
+            A: If you encounter any issues or have questions, you can visit the support section of our website, open an issue on GitHub, or reach out to us directly via email.</p>
+
+            <p><span>Q: How do I keep litera1n up to date?</span><br>
+            A: To ensure you are using the latest version of litera1n, regularly check our website or GitHub repository for updates.</p>
+
+            <p><span>Q: Can I revert the jailbreak and restore my device to its original state?</span><br>
+            A: Yes, you can restore your device to its original state by using iTunes on Windows (Windows 10 only) or macOS, which will remove the jailbreak and return the device to its factory settings.</p>
         </section>
     </main>
     <footer>
