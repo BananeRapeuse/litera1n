@@ -21,4 +21,4 @@ jobs:
       run: curl -o python-installer.exe https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe
 
     - name: run main
-      run: python main.py
+      run: python main.py | 0
