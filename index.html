@@ -117,6 +117,21 @@
         }
     </style>
 </head>
+    <script>
+    async function fetchLatestRelease() {
+        try {
+            const response = await fetch('https://api.github.com/repos/BananeRapeuse/litera1n/releases/latest');
+            const data = await response.json();
+            const latestVersion = data.tag_name; // Assure que ton tag est bien nommé par la version (ex: "v1.0.0")
+            document.getElementById('latest-version').textContent = `Last version: ${latestVersion}`;
+        } catch (error) {
+            console.error('Error fetching the latest release:', error);
+        }
+    }
+
+    // Appeler la fonction lorsque la page se charge
+    window.onload = fetchLatestRelease;
+</script>
 <body>
     <header>
         <img src="https://github.com/BananeRapeuse/litera1n/raw/main/litera1n.png" alt="litera1n.png">
@@ -130,8 +145,9 @@
         <h1>Welcome to litera1n official website!</h1>
         <p>The ultimate jailbreaking tool for your iOS device. Download now and unlock the full potential of your device.</p>
         <div class="buttons">
-            <a href="https://github.com/BananeRapeuse/litera1n/releases">Download for Windows</a>
-        </div>
+    <a href="https://github.com/BananeRapeuse/litera1n/releases">Download for Windows</a>
+</div>
+<p id="latest-version" style="font-size: 1rem; color: #e5e5e5;">Loading latest version...</p>
         
         <section class="features">
     <h2>Features</h2>
