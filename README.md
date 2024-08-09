@@ -10,7 +10,8 @@ We are always in developement but you can also jailbreak (jailbreak is ready to 
 
 # Testers
 <a href= https://github.com/BananeRapeuse/litera1n/blob/main/testers.md>Testers,</a>
-DM me on discord @frelon111 to be a tester
+DM me on discord: `frelon111` or reddit: `Ph0qu3_111` to be a tester,
+all the testers will be added in the `"thanks to"` part of the [official website](https://bananerapseuse.github.io/litera1n) and on the [credits part of the github](https://github.com/BananeRapeuse/litera1n?tab=readme-ov-file#credits).
 
 # RUN ALL OF THIS USING ADMIN COMMAND PROMPT
 
@@ -77,7 +78,8 @@ usb.core.NoBackendError: No backend available
 _with this error you must read the #must do section_
 
 # Credits:
- axi0mX for the checkm8 exploit
+- [axi0mX](https://github.com/axi0mx) for the checkm8 exploit
+- [Kim Jong Cracks](https://github.com/KJCracks) for checkra1n
  
  # Disclaimer
  We are not responsible for your device errors, or any data loosing/corrupting, ...
