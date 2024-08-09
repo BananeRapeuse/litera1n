@@ -7,7 +7,8 @@
 # How to CLI Jailbreak
 
 1. type `1` to start
-2. follow the instructions
+2. type `y` ti confirme you're sure
+3. follow the instructions
 
 # How to GUI Jailbreak
 
