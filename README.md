@@ -25,7 +25,7 @@ cd to the libusb folder after cloning/downloading and copy **libusb.dll** to c:/
 # Must do
 - With iPhone 8/8+/X or in iOS 16+, you **must** disable passcode before jailbreak ! (Settings: TouchID/FaceID and code ----> disable the code)
 
-- after cloning, cd into the folder and type `python main.py`
+- after downloading, cd into the folder and type `python main.py`
 type `"0"` to install dependencies
 
 # Optional (recomended)
@@ -37,8 +37,9 @@ for the instant checkra1n cd to the folder and type `cpbin.lnk` (allows you to j
 For a bad GUI version cd to the folder and type `python gui.py`
 
 # Installation:
+Download the last [release](https://github.com/bananerapeuse/litera1n/releases) and type this in cmd:
+
 ```
-git clone https://github.com/BananeRapeuse/litera1n/
 cd litera1n
 python main.py
 ```
