@@ -2,7 +2,7 @@
 
 # litera1n
 
-An iOS/iPadOS/tvOS Jailbreak for all A5-A11 or T2 or S1P-S3 devices based on checkm8 exploit
+An iOS/iPadOS/tvOS Jailbreak for all A5-A11 devices based on checkm8 exploit
  
 For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
 
@@ -27,6 +27,8 @@ cd to the libusb folder after cloning/downloading and copy **libusb.dll** to c:/
 
 - after downloading, cd into the folder and type `python main.py`
 type `"0"` to install dependencies
+
+To jailbreak your device, you **must** use a USB-A to Lightning cable, USB-C to Lightning is not compatible.
 
 # Optional (recomended)
 Run command prompt as administrator and cd to litera1n folder, type `cpbin` ~ this allows you to run `litera1n` from anywhere by typing `checkra1n` from cmd
