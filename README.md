@@ -23,7 +23,7 @@ python from https://python.org
 cd to the libusb folder after cloning/downloading and copy **libusb.dll** to c:/windows/system32 and c:/windows/syswow64 (only if 64bit) then run **infinstaller.exe** from libusb folder and install the .inf file by right clicking. AFter that copy **Libusb0.sys** to c:/windows/system32/Drivers and c:/windows/syswow64 (only if 64bit)
 
 # Must do
-- With iPhone 8/8+/X or in iOS 16+, you **must** disable passcode before jailbreak ! (Settings: TouchID/FaceID and code ----> disable the code)
+- With iPhone 8/8+/X, you **must** disable passcode before jailbreak ! (Settings: TouchID/FaceID and code ----> disable the code)
 
 - after downloading, cd into the folder and type `python main.py`
 type `"0"` to install dependencies
@@ -79,7 +79,7 @@ usb.core.NoBackendError: No backend available
 _with this error you must read the #must do section_
 
 # Credits:
-- [axi0mX](https://github.com/axi0mx) for the checkm8 exploit
+- [axi0mX](https://github.com/axi0mx) for the checkm8 exploit and ipwndfu
 - [Kim Jong Cracks](https://github.com/KJCracks) for checkra1n
  
  # Disclaimer
