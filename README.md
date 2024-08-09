@@ -61,7 +61,7 @@ python main.py
 - iPhone: iPhone 4s --> iPhone X
 - iPad: iPad 2 --> iPad 7th gen
 - iPod Touch: iPod 5th gen --> iPod 7th gen
-- AplleTV: AppleTV 3rd gen --> AppleTV 4k 1st gen
+- AppleTV: AppleTV 3rd gen --> AppleTV 4k 1st gen
 
 # Troubleshooting:
 1. restart your computer at least 3 times after installing drivers
