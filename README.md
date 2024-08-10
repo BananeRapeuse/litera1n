@@ -2,7 +2,7 @@
 
 # litera1n
 
-An iOS/iPadOS/tvOS Jailbreak for all A4-A11 devices and iPhone 3GS
+An iOS/iPadOS/tvOS Jailbreak for all A4-A11 devices, iPhone 3GS and iPod Touch 2nd gen
  
 For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
 
@@ -12,7 +12,7 @@ We are always in developement but you can also jailbreak (jailbreak is ready to 
 
 - iPhone: iPhone 3GS --> iPhone X
 - iPad: iPad 2 --> iPad 7th gen
-- iPod Touch: iPod 2nd gen --> iPod 7th gen
+- iPod Touch: iPod Touch 2nd gen --> iPod Touch 7th gen
 - AppleTV: AppleTV 3rd gen --> AppleTV 4k 1st gen
 
 # Exploits
