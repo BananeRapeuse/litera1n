@@ -6,13 +6,21 @@ while True:
 	print("#   Welcome to litera1n ! #")
 	print("#      by Ph0qu3_111      #")
 	print("###########################")
-	print("[0]. Install dependencies (MUST DO once)")
-	print("[1]. Terminal Jailbreak")
-	print("[2]. GUI Jailbreak")
-	print("[3]. Github link")
-	print("[4]. Jailbreak guide")
-	print("[5]. exit")
-	print("type help for help")
+	print("# If you try to jailbreak #")
+	print("#  a A11 device you must  #")
+	print("#  disable your passcode  #")
+	print("#       in settings       #")
+	print("###########################")
+	print(" ")
+	print(" Please choose an option: ")
+	print("[0] Install dependencies (YOU MUST)")
+	print("[1] CLI Jailbreak        ")
+	print("[2] GUI Jailbreak        ")
+	print("[3] Github link          ")
+	print("[4] Jailbreak guide      ")
+	print("[5] exit                 ")
+	print("[help] for help          ")
+
 	choice = input("$ ")
 	print(choice)
 	if choice == "1":
@@ -22,7 +30,7 @@ while True:
 	elif choice == "3":
 		print("https://github.com/BananeRapseuse/litera1n")
 	elif choice == "4":
-		print("Go to the github repository or check README.md")
+		os.system("type Jailbreak.md")
 	elif choice == "0":
 		os.system("pip install -r requirements.txt")
 		os.system("install.lnk")
