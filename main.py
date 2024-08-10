@@ -19,6 +19,7 @@ while True:
 	print("[3] Github link          ")
 	print("[4] Jailbreak guide      ")
 	print("[5] exit                 ")
+	print("[6] Credits ")
 	print("[help] for help          ")
 
 	choice = input("$ ")
@@ -38,6 +39,8 @@ while True:
 		os.system("python gui.py")
 	elif choice == "help":
 		os.system("type README.md")
+	elif choice == "6" :
+		os.system("type credits.md")
 	elif choice == "5":
 		break
 
