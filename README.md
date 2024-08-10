@@ -8,6 +8,13 @@ For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/
 
 We are always in developement but you can also jailbreak (jailbreak is ready to use)
 
+# Compatability
+
+- iPhone: iPhone 3GS --> iPhone X
+- iPad: iPad 2 --> iPad 7th gen
+- iPod Touch: iPod 2nd gen --> iPod 7th gen
+- AppleTV: AppleTV 3rd gen --> AppleTV 4k 1st gen
+
 # Exploits
 - steaks4uce: iPod Touch 2nd gen
 - limera1n: iPod Touch 3rd gen, iPhone 3GS, all A4 devices
@@ -31,16 +38,16 @@ The checkm8 exploit is a BootROM exploit with a CVE ID of CVE-2019-8900 used to 
 DM me on discord: `frelon111` or reddit: `Ph0qu3_111` to be a tester,
 all the testers will be added in the `"thanks to"` part of the [official website](https://bananerapseuse.github.io/litera1n) and on the [credits part of the github](https://github.com/BananeRapeuse/litera1n?tab=readme-ov-file#credits).
 
+# Insrallation process:
 # RUN ALL OF THIS USING ADMIN COMMAND PROMPT
-
-# Preinstall
+## Preinstall
 git from https://git-scm.com/
 
 python from https://python.org
 ### IMPORTANT
 cd to the libusb folder after cloning/downloading and copy **libusb.dll** to c:/windows/system32 and c:/windows/syswow64 (only if 64bit) then run **infinstaller.exe** from libusb folder and install the .inf file by right clicking. AFter that copy **Libusb0.sys** to c:/windows/system32/Drivers and c:/windows/syswow64 (only if 64bit)
 
-# Must do
+## Must do
 - With A11 devices, you **must** disable passcode before jailbreak ! (Settings: TouchID/FaceID and code ----> disable the code)
 
 - after downloading, cd into the folder and type `python main.py`
@@ -48,15 +55,15 @@ type `"0"` to install dependencies
 
 - To jailbreak your device, you **must** use a USB-A to Lightning cable, USB-C to Lightning is not compatible.
 
-# Optional (recomended)
+### Optional (recomended)
 Run command prompt as administrator and cd to litera1n folder, type `cpbin` ~ this allows you to run `litera1n` from anywhere by typing `checkra1n` from cmd
 
-# Steps
+## Steps
 For the menu, simply follow installation
 for the instant checkra1n cd to the folder and type `cpbin.lnk` (allows you to just type checkra1n from anywhere, boot flags not supported yet)
 For a bad GUI version cd to the folder and type `python gui.py`
 
-# Installation:
+## Installation:
 Download the last [release](https://github.com/bananerapeuse/litera1n/releases) and type this in cmd:
 
 ```
@@ -73,13 +80,6 @@ python main.py
 
 # TO DO:
 - [ ] Make the GUI better
-
-# Compatability
-
-- iPhone: iPhone 3GS --> iPhone X
-- iPad: iPad 2 --> iPad 7th gen
-- iPod Touch: iPod 2nd gen --> iPod 7th gen
-- AppleTV: AppleTV 3rd gen --> AppleTV 4k 1st gen
 
 # Troubleshooting:
 1. restart your computer at least 3 times after installing drivers
