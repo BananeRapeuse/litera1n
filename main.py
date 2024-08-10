@@ -12,7 +12,7 @@ while True:
 	print("#       in settings       #")
 	print("###########################")
 	print(" ")
-	print(" Please choose an option: ")
+	print("Please choose an option: ")
 	print("[0] Install dependencies (YOU MUST)")
 	print("[1] CLI Jailbreak        ")
 	print("[2] GUI Jailbreak        ")
