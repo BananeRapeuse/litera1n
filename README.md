@@ -19,7 +19,7 @@ We are always in developement but you can also jailbreak (jailbreak is ready to 
 The checkm8 exploit is a BootROM exploit with a CVE ID of CVE-2019-8900 used to run unsigned code on iOS, iPadOS, tvOS, watchOS, bridgeOS, audioOS, and Haywire devices with processors between an A5 and an A11, a S1P and a S3, a S5L8747, and a T2 (and thereby jailbreak it). Jailbreaks based on checkm8 are semi-tethered jailbreaks as the exploit works by taking advantage of vulnerabilities in the USB DFU stack. The main use-after-free is actually unpatched in T8020, T8027 or T8030, but cannot be exploited without a memory leak, of which the one used in checkm8 was made unreachable in T8020 and above.
 
 # Testers
-<a href= https://github.com/BananeRapeuse/litera1n/blob/main/testers.md>Testers,</a>
+<a href= https://github.com/BananeRapeuse/litera1n/blob/main/testers.md>Testers</a>, 
 DM me on discord: `frelon111` or reddit: `Ph0qu3_111` to be a tester,
 all the testers will be added in the `"thanks to"` part of the [official website](https://bananerapseuse.github.io/litera1n) and on the [credits part of the github](https://github.com/BananeRapeuse/litera1n?tab=readme-ov-file#credits).
 
