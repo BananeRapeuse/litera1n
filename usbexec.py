@@ -7,25 +7,25 @@ class ExecConfig:
     self.aes_crypto_cmd = aes_crypto_cmd
 
   def match(self, info):
-    return info == self.info[0].ljust(0x40, b'\0') + self.info[1].ljust(0x40, b'\0') + self.info[2].ljust(0x80, b'\0')
+    return info == self.info[0].ljust(0x40, '\0') + self.info[1].ljust(0x40, '\0') + self.info[2].ljust(0x80, '\0')
 
 configs = [
-  ExecConfig((b'SecureROM for s5l8947xsi, Copyright 2011, Apple Inc.',   b'RELEASE',     b'iBoot-1458.2'),          aes_crypto_cmd=0x7060+1),
-  ExecConfig((b'SecureROM for s5l8950xsi, Copyright 2011, Apple Inc.',   b'RELEASE',     b'iBoot-1145.3'),          aes_crypto_cmd=0x7300+1),
-  ExecConfig((b'SecureROM for s5l8955xsi, Copyright 2011, Apple Inc.',   b'RELEASE',     b'iBoot-1145.3.3'),        aes_crypto_cmd=0x7340+1),
-  ExecConfig((b'SecureROM for t8002si, Copyright 2007-2014, Apple Inc.', b'ROMRELEASE',  b'iBoot-2651.0.0.1.31'),   aes_crypto_cmd=0x86DC+1),
-  ExecConfig((b'SecureROM for t8004si, Copyright 2007-2014, Apple Inc.', b'ROMRELEASE',  b'iBoot-2651.0.0.3.3'),    aes_crypto_cmd=0x786C+1),
-  ExecConfig((b'SecureROM for s5l8960xsi, Copyright 2012, Apple Inc.',   b'RELEASE',     b'iBoot-1704.10'),         aes_crypto_cmd=0x10000B9A8),
-  ExecConfig((b'SecureROM for t8010si, Copyright 2007-2015, Apple Inc.', b'ROMRELEASE',  b'iBoot-2696.0.0.1.33'),   aes_crypto_cmd=0x10000C8F4),
-  ExecConfig((b'SecureROM for t8011si, Copyright 2007-2015, Apple Inc.', b'ROMRELEASE',  b'iBoot-3135.0.0.2.3'),    aes_crypto_cmd=0x10000C994),
-  ExecConfig((b'SecureROM for t8015si, Copyright 2007-2016, Apple Inc.', b'ROMRELEASE',  b'iBoot-3332.0.0.1.23'),   aes_crypto_cmd=0x100009E9C),
+  ExecConfig(('SecureROM for s5l8947xsi, Copyright 2011, Apple Inc.',   'RELEASE',     'iBoot-1458.2'),          aes_crypto_cmd=0x7060+1),
+  ExecConfig(('SecureROM for s5l8950xsi, Copyright 2011, Apple Inc.',   'RELEASE',     'iBoot-1145.3'),          aes_crypto_cmd=0x7300+1),
+  ExecConfig(('SecureROM for s5l8955xsi, Copyright 2011, Apple Inc.',   'RELEASE',     'iBoot-1145.3.3'),        aes_crypto_cmd=0x7340+1),
+  ExecConfig(('SecureROM for t8002si, Copyright 2007-2014, Apple Inc.', 'ROMRELEASE',  'iBoot-2651.0.0.1.31'),   aes_crypto_cmd=0x86DC+1),
+  ExecConfig(('SecureROM for t8004si, Copyright 2007-2014, Apple Inc.', 'ROMRELEASE',  'iBoot-2651.0.0.3.3'),    aes_crypto_cmd=0x786C+1),
+  ExecConfig(('SecureROM for s5l8960xsi, Copyright 2012, Apple Inc.',   'RELEASE',     'iBoot-1704.10'),         aes_crypto_cmd=0x10000B9A8),
+  ExecConfig(('SecureROM for t8010si, Copyright 2007-2015, Apple Inc.', 'ROMRELEASE',  'iBoot-2696.0.0.1.33'),   aes_crypto_cmd=0x10000C8F4),
+  ExecConfig(('SecureROM for t8011si, Copyright 2007-2015, Apple Inc.', 'ROMRELEASE',  'iBoot-3135.0.0.2.3'),    aes_crypto_cmd=0x10000C994),
+  ExecConfig(('SecureROM for t8015si, Copyright 2007-2016, Apple Inc.', 'ROMRELEASE',  'iBoot-3332.0.0.1.23'),   aes_crypto_cmd=0x100009E9C),
 ]
 
-EXEC_MAGIC = b'execexec'[::-1]
-DONE_MAGIC = b'donedone'[::-1]
-MEMC_MAGIC = b'memcmemc'[::-1]
-MEMS_MAGIC = b'memsmems'[::-1]
-USB_READ_LIMIT  = 0xFFFF # why does that panic T8015 ROM?
+EXEC_MAGIC = 'execexec'[::-1]
+DONE_MAGIC = 'donedone'[::-1]
+MEMC_MAGIC = 'memcmemc'[::-1]
+MEMS_MAGIC = 'memsmems'[::-1]
+USB_READ_LIMIT  = 0x8000
 CMD_TIMEOUT     = 5000
 AES_BLOCK_SIZE  = 16
 AES_ENCRYPT     = 16
@@ -83,7 +83,7 @@ class PwnedUSBDevice():
     return received[:len(data)]      
 
   def read_memory(self, address, length):
-    data = bytes()
+    data = str()
     while len(data) < length:
       part_length = min(length - len(data), USB_READ_LIMIT - self.cmd_data_offset(0))
       response = self.command(self.cmd_memcpy(self.cmd_data_address(0), address + len(data), part_length), self.cmd_data_offset(0) + part_length)
@@ -95,7 +95,7 @@ class PwnedUSBDevice():
     assert 0 <= response_length <= USB_READ_LIMIT
     device = dfu.acquire_device()
     assert self.serial_number == device.serial_number
-    dfu.send_data(device, b'\0' * 16)
+    dfu.send_data(device, '\0' * 16)
     device.ctrl_transfer(0x21, 1, 0, 0, 0, 100)
     device.ctrl_transfer(0xA1, 3, 0, 0, 6, 100)
     device.ctrl_transfer(0xA1, 3, 0, 0, 6, 100)
@@ -111,17 +111,17 @@ class PwnedUSBDevice():
     return response
 
   def execute(self, response_length, *args):
-    cmd = bytes()
+    cmd = str()
     for i in range(len(args)):
-      if isinstance(args[i], int):
+      if isinstance(args[i], (int, long)):
         cmd += struct.pack('<%s' % self.cmd_arg_type(), args[i])
-      elif isinstance(args[i], str) and i == len(args) - 1:
+      elif isinstance(args[i], basestring) and i == len(args) - 1:
         cmd += args[i]
       else:
-        print('ERROR: usbexec.execute: invalid argument at position %s' % i)
+        print 'ERROR: usbexec.execute: invalid argument at position %s' % i
         sys.exit(1)
       if i == 0 and self.platform.arch != 'arm64':
-        cmd += b'\0' * 4
+        cmd += '\0' * 4
     response = self.command(EXEC_MAGIC + cmd, self.cmd_data_offset(0) + response_length)
     done, retval = struct.unpack('<8sQ', response[:self.cmd_data_offset(0)])
     assert done == DONE_MAGIC
@@ -140,8 +140,8 @@ class PwnedUSBDevice():
         self.platform = dp
         break
     if self.platform is None:
-      print(self.serial_number)
-      print('ERROR: No matching usbexec.platform found for this device.')
+      print self.serial_number
+      print 'ERROR: No matching usbexec.platform found for this device.'
       sys.exit(1)
 
     info = self.read_memory(self.image_base() + 0x200, 0x100)
@@ -150,6 +150,6 @@ class PwnedUSBDevice():
         self.config = config
         break
     if self.config is None:
-      print(info)
-      print('ERROR: No matching usbexec.config found for this image.')
+      print info
+      print 'ERROR: No matching usbexec.config found for this image.'
       sys.exit(1)
