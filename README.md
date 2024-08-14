@@ -1,4 +1,5 @@
 <img src="litera1n.png" alt="logo">
+the best alternative for palera1n or checkra1n on Windows
 
 # litera1n
 
