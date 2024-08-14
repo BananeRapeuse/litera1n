@@ -95,9 +95,12 @@ usb.core.NoBackendError: No backend available
 
 _with this error you must read the #must do section_
 
+
+ # Disclaimer
+ We are not responsible for your device problemes, or any data loosing/corrupting, ...
+
+
 # Credits:
 - [axi0mX](https://github.com/axi0mx) for the checkm8 exploit, ipwndfu and the checkm8 description
 - [Kim Jong Cracks](https://github.com/KJCracks) for checkra1n
 - [walac](https://github.com/walac) for pyusb
- # Disclaimer
- We are not responsible for your device problemes, or any data loosing/corrupting, ...
