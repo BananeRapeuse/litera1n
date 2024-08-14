@@ -62,6 +62,7 @@ cd litera1n
 python main.py
 0
 ```
+you must type 0 before anythings to install dependencies and drivers
 ### Optional (recomended)
 Run command prompt as administrator and cd to litera1n folder, type `cpbin` ~ this allows you to run `litera1n` from anywhere by typing `checkra1n` from cmd
 
@@ -70,9 +71,6 @@ in `main.py`, type `1` for a command line jailbreak or `2` for a bad GUI jailbre
 
 ### Must do
 - With A11 devices, you **must** disable passcode before jailbreak ! (Settings: TouchID/FaceID and code ----> disable the code)
-
-- after downloading, cd into the folder and type `python main.py` and
-type `"0"` to install dependencies
 
 - To jailbreak your device, you **must** use a USB-A to Lightning cable, USB-C to Lightning is not compatible.
 
