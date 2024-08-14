@@ -1,6 +1,4 @@
 <img src="litera1n.png" alt="logo">
-the best alternative for palera1n or checkra1n on Windows
-
 # litera1n
 
 ACTYALY NOT WORKING (you may got a lot of errors we are try to patch)
