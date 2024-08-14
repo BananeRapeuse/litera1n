@@ -8,8 +8,6 @@ An iOS/iPadOS/tvOS Jailbreak for all A5-A11 devices using the checkm8 exploit.
  
 For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
 
-We are always in developement but you can also jailbreak (jailbreak is ready to use)
-
 # Compatability
 
 - iPhone: iPhone 4s --> iPhone X
@@ -18,7 +16,17 @@ We are always in developement but you can also jailbreak (jailbreak is ready to 
 - AppleTV: AppleTV 3rd gen --> AppleTV 4k 1st gen
 
 # checkm8
-The checkm8 exploit is a BootROM exploit with a CVE ID of CVE-2019-8900 used to run unsigned code on iOS, iPadOS, tvOS, watchOS, bridgeOS, audioOS, and Haywire devices with processors between an A5 and an A11, a S1P and a S3, a S5L8747, and a T2 (and thereby jailbreak it). Jailbreaks based on checkm8 are semi-tethered jailbreaks as the exploit works by taking advantage of vulnerabilities in the USB DFU stack. The main use-after-free is actually unpatched in T8020, T8027 or T8030, but cannot be exploited without a memory leak, of which the one used in checkm8 was made unreachable in T8020 and above.
+- permanent unpatchable bootrom exploit for hundreds of millions of iOS devices
+
+- meant for researchers, this is not a jailbreak with Cydia yet
+
+- allows dumping SecureROM, decrypting keybags for iOS firmware, and demoting device for JTAG
+
+- current SoC support: s5l8947x, s5l8950x, s5l8955x, s5l8960x, t8002, t8004, t8010, t8011, t8015
+
+- future SoC support: s5l8940x, s5l8942x, s5l8945x, s5l8747x, t7000, t7001, s7002, s8000, s8001, s8003, t8012
+
+- full jailbreak with Cydia on latest iOS version is possible, but requires additional work
 
 # Testers
 <a href= https://github.com/BananeRapeuse/litera1n/blob/main/testers.md>Testers</a>, 
@@ -32,12 +40,12 @@ git from https://git-scm.com/
 
 python from https://python.org
 ### IMPORTANT
-cd to the libusb folder after cloning/downloading and copy **libusb.dll** to c:/windows/system32 and c:/windows/syswow64 (only if 64bit) then run **infinstaller.exe** from libusb folder and install the .inf file by right clicking. AFter that copy **Libusb0.sys** to c:/windows/system32/Drivers and c:/windows/syswow64 (only if 64bit)
+cd to the litera1n folder after cloning/downloading and copy "**libusb0.dll**" to `c:/windows/system32` and `c:/windows/sysWOW64` (only if you're on a 64bit Windows) then run "**infinstaller.exe**" from libusb folder and install the .inf file by right clicking. After that copy "**Libusb0.sys**" to `c:/windows/system32/Drivers` and `c:/windows/sysWOW64` (only if you're on a 64bit Windows)
 
 ## Must do
 - With A11 devices, you **must** disable passcode before jailbreak ! (Settings: TouchID/FaceID and code ----> disable the code)
 
-- after downloading, cd into the folder and type `python main.py`
+- after downloading, cd into the folder and type `python main.py` and
 type `"0"` to install dependencies
 
 - To jailbreak your device, you **must** use a USB-A to Lightning cable, USB-C to Lightning is not compatible.
@@ -59,8 +67,8 @@ python main.py
 ```
 
 # Features
-- Gui
-- Cli
+- GUI
+- CLI
 - DFU tool ~ `python dfu.py`
 - Menu
 - Open source
@@ -73,7 +81,8 @@ python main.py
 2. re-try the jailbreak
 
 # Errors:
- **1.** File "C:\Users\users\Downloads\ipwndfu-master\ipwndfu-master\ipwndfu", line 47, in <module>
+ **1.** 
+ File "C:\Users\users\Downloads\ipwndfu-master\ipwndfu-master\ipwndfu", line 47, in <module>
     device = dfu.acquire_device()
   File "C:\Users\users\Downloads\ipwndfu-master\ipwndfu-master\dfu.py", line 16, in acquire_device
     for device in usb.core.find(find_all=True, idVendor=0x5AC, idProduct=0x1227, backend=backend):
@@ -87,9 +96,8 @@ usb.core.NoBackendError: No backend available
 _with this error you must read the #must do section_
 
 # Credits:
-- [axi0mX](https://github.com/axi0mx) for the checkm8 exploit and ipwndfu
+- [axi0mX](https://github.com/axi0mx) for the checkm8 exploit, ipwndfu and the checkm8 description
 - [Kim Jong Cracks](https://github.com/KJCracks) for checkra1n
 - [walac](https://github.com/walac) for pyusb
-- [The apple wiki](https://theapplewiki.com/wiki/) for checkm8 description
  # Disclaimer
  We are not responsible for your device problemes, or any data loosing/corrupting, ...
