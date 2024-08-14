@@ -8,6 +8,10 @@ An iOS/iPadOS/tvOS Jailbreak for all A5-A11 devices using the checkm8 exploit.
  
 For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
 
+# Disclaimer
+ We are not responsible for your device problemes, or any data loosing/corrupting, boot loop, ...
+
+
 # Compatability
 
 - iPhone: iPhone 4s --> iPhone X
@@ -33,39 +37,6 @@ For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/
 DM me on discord: `frelon111` or reddit: `Ph0qu3_111` to be a tester,
 all the testers will be added in the `"thanks to"` part of the [official website](https://bananerapseuse.github.io/litera1n) and on the [credits part of the github](https://github.com/BananeRapeuse/litera1n?tab=readme-ov-file#credits).
 
-# Insrallation process:
-# RUN ALL OF THIS USING ADMIN COMMAND PROMPT
-## Preinstall
-git from https://git-scm.com/
-
-python from https://python.org
-### IMPORTANT
-cd to the litera1n folder after cloning/downloading and copy "**libusb0.dll**" to `c:/windows/system32` and `c:/windows/sysWOW64` (only if you're on a 64bit Windows) then run "**infinstaller.exe**" from libusb folder and install the .inf file by right clicking. After that copy "**Libusb0.sys**" to `c:/windows/system32/Drivers` and `c:/windows/sysWOW64` (only if you're on a 64bit Windows)
-
-## Must do
-- With A11 devices, you **must** disable passcode before jailbreak ! (Settings: TouchID/FaceID and code ----> disable the code)
-
-- after downloading, cd into the folder and type `python main.py` and
-type `"0"` to install dependencies
-
-- To jailbreak your device, you **must** use a USB-A to Lightning cable, USB-C to Lightning is not compatible.
-
-### Optional (recomended)
-Run command prompt as administrator and cd to litera1n folder, type `cpbin` ~ this allows you to run `litera1n` from anywhere by typing `checkra1n` from cmd
-
-## Steps
-For the menu, simply follow installation
-for the instant checkra1n cd to the folder and type `cpbin.lnk` (allows you to just type checkra1n from anywhere, boot flags not supported yet)
-For a bad GUI version cd to the folder and type `python gui.py`
-
-## Installation:
-Download the last [release](https://github.com/bananerapeuse/litera1n/releases) and type this in cmd:
-
-```
-cd litera1n
-python main.py
-```
-
 # Features
 - GUI
 - CLI
@@ -75,6 +46,35 @@ python main.py
 
 # TO DO:
 - [ ] Make the GUI better
+
+# Insrallation and jailbreaking process:
+### RUN ALL OF THIS USING ADMIN COMMAND PROMPT
+## Preinstall
+git from https://git-scm.com/
+
+python from https://python.org
+
+## Installation:
+Download the last [release](https://github.com/bananerapeuse/litera1n/releases) and type this in cmd:
+
+```
+cd litera1n
+python main.py
+0
+```
+### Optional (recomended)
+Run command prompt as administrator and cd to litera1n folder, type `cpbin` ~ this allows you to run `litera1n` from anywhere by typing `checkra1n` from cmd
+
+## Jailbreak
+in `main.py`, type `1` for a command line jailbreak or `2` for a bad GUI jailbreak
+
+### Must do
+- With A11 devices, you **must** disable passcode before jailbreak ! (Settings: TouchID/FaceID and code ----> disable the code)
+
+- after downloading, cd into the folder and type `python main.py` and
+type `"0"` to install dependencies
+
+- To jailbreak your device, you **must** use a USB-A to Lightning cable, USB-C to Lightning is not compatible.
 
 # Troubleshooting:
 1. restart your computer at least 3 times after installing drivers
@@ -94,11 +94,6 @@ usb.core.NoBackendError: No backend available
 (also remember to install python with this error)
 
 _with this error you must read the #must do section_
-
-
- # Disclaimer
- We are not responsible for your device problemes, or any data loosing/corrupting, ...
-
 
 # Credits:
 - [axi0mX](https://github.com/axi0mx) for the checkm8 exploit, ipwndfu and the checkm8 description
