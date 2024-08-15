@@ -1,55 +1,63 @@
-import tkinter as tk
-from tkinter import Text
-import subprocess
+import sys
+import os
+import time
+from tkinter import *
 
-# Fonction pour lire la version depuis le fichier "version"
-def read_version():
-    try:
-        with open("version", "r") as file:
-            return file.read().strip()
-    except FileNotFoundError:
-        return "unknown"
+window = Tk()
 
-# Fonction exécutée lors du clic sur le bouton "Jailbreak"
-def jailbreak():
-    window.title("Jailbreaking…")
-    jailbreak_button.config(state=tk.DISABLED)
-    # Exécute la commande pour le jailbreak
-    subprocess.Popen(["python", "ipwndfu", "-p"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+window.title("litera1n")
+window.geometry('500x450')
 
-# Fonction pour exécuter une commande dans le terminal intégré
-def run_command():
-    command = terminal_input.get("1.0", tk.END).strip()
-    if command:
-        terminal_output.insert(tk.END, f"> {command}\n")
-        terminal_input.delete("1.0", tk.END)
-        result = subprocess.run(command, shell=True, capture_output=True, text=True)
-        terminal_output.insert(tk.END, result.stdout + result.stderr + "\n")
+def run():
+    os.system('python ipwndfu -p')
 
-# Lecture de la version
-version = read_version()
+def term():
+    os.system('python term.py')
 
-# Configuration de la fenêtre principale
-window = tk.Tk()
-window.title(f"litera1n Jailbreak: version {version}")
-window.geometry("800x600")
+def exit_app():
+    window.quit()
 
-# Bouton de jailbreak
-jailbreak_button = tk.Button(window, text="Jailbreak", command=jailbreak)
-jailbreak_button.pack(pady=20)
+my_frame = Frame(window, width=300, height=300) 
+my_frame.pack()
 
-# Terminal intégré (affiche l'output)
-terminal_output = Text(window, height=15, width=100)
-terminal_output.pack(pady=10)
+btn = Button(my_frame, text="Jailbreak", bg="black", fg="white", command=run)
+btn.place(x=100, y=100, width=100, height=50)
 
-# Terminal intégré (input de commande)
-terminal_input = Text(window, height=2, width=100)
-terminal_input.pack(pady=5)
-terminal_input.bind("<Return>", lambda event: run_command())
+class Lol(Frame):
+    def __init__(self, master=None):
+        Frame.__init__(self, master)
+        self.master = master
 
-# Exécution initiale de la commande "python term.py"
-result = subprocess.run(["python", "term.py"], capture_output=True, text=True)
-terminal_output.insert(tk.END, result.stdout + result.stderr + "\n")
+        menu = Menu(self.master)
+        self.master.config(menu=menu)
 
-# Boucle principale de l'interface
+        fileMenu = Menu(menu)
+        fileMenu.add_command(label="Terminal", command=term)
+        fileMenu.add_command(label="Exit", command=exit_app)
+        menu.add_cascade(label="Open", menu=fileMenu)
+
+        editMenu = Menu(menu)
+        editMenu.add_command(label="Undo")
+        editMenu.add_command(label="Redo")
+        menu.add_cascade(label="Edit", menu=editMenu)
+
+class Clock(Frame):
+    def __init__(self, master=None):
+        Frame.__init__(self, master)
+        self.master = master
+        self.label = Label(text="", fg="Red", font=("Helvetica", 18))
+        self.label.place(x=50, y=80)
+        self.update_clock()
+
+    def update_clock(self):
+        now = time.strftime("%H:%M:%S")
+        self.label.configure(text=now)
+        self.master.after(1000, self.update_clock)
+
+window.configure(bg="black")
+
+# Create instances of the classes
+app = Lol(window)
+app2 = Clock(window)
+
 window.mainloop()
