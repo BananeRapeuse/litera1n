@@ -7,7 +7,7 @@ while True:
     print("#      by Ph0qu3_111      #")
     print("###########################")
     print("# If you try to jailbreak #")
-    print("#  an A11 device you must  #")
+    print("#  an A11 device you must #")
     print("#  disable your passcode  #")
     print("#       in settings       #")
     print("###########################")
