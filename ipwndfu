@@ -77,7 +77,7 @@ if __name__ == '__main__':
             elif 'CPID:8015' in serial_number:
                 checkm8.exploit()
             else:
-                print('Found:', serial_number)
+                print(('Found:', serial_number))
                 print('ERROR: This device is not supported.')
                 sys.exit(1)
 
@@ -89,7 +89,7 @@ if __name__ == '__main__':
 
             if device.config.version == '359.3':
                 print('WARNING: iPhone 3GS (old bootrom) was detected. Use 24Kpwn exploit for faster boots, alloc8 exploit is for testing purposes only.')
-                input("Press ENTER to continue.")
+                eval(input("Press ENTER to continue."))
 
             print('Installing alloc8 exploit to NOR.')
 
@@ -116,7 +116,7 @@ if __name__ == '__main__':
                 with open(arg, 'rb') as f:
                     data = f.read()
             except IOError:
-                print('ERROR: Could not read file:', arg)
+                print(('ERROR: Could not read file:', arg))
                 sys.exit(1)
 
             device = dfu.acquire_device()
@@ -133,12 +133,12 @@ if __name__ == '__main__':
             if 'PWND:[checkm8]' in serial_number:
                 pwned = usbexec.PwnedUSBDevice()
                 old_value = pwned.read_memory_uint32(pwned.platform.demotion_reg)
-                print('Demotion register: 0x%x' % old_value)
+                print(('Demotion register: 0x%x' % old_value))
                 if old_value & 1:
                     print('Attempting to demote device.')
                     pwned.write_memory_uint32(pwned.platform.demotion_reg, old_value & 0xFFFFFFFE)
                     new_value = pwned.read_memory_uint32(pwned.platform.demotion_reg)
-                    print('Demotion register: 0x%x' % new_value)
+                    print(('Demotion register: 0x%x' % new_value))
                     if old_value != new_value:
                         print('Success!')
                     else:
@@ -166,7 +166,7 @@ if __name__ == '__main__':
                 sys.stdout.write(device.read_memory(address, length))
             else:
                 device = PwnedDFUDevice()
-                print(device.read_memory(address, length))
+                print((device.read_memory(address, length)))
 
         if opt == '--hexdump':
             if arg.count(',') != 1:
@@ -184,12 +184,12 @@ if __name__ == '__main__':
                 device = usbexec.PwnedUSBDevice()
                 dump = device.read_memory(address, length)
                 for line in utilities.hex_dump(dump, address).splitlines():
-                    print('%x: %s' % (address, line[10:]))
+                    print(('%x: %s' % (address, line[10:])))
                     address += 16
             else:
                 device = PwnedDFUDevice()
                 dump = device.read_memory(address, length)
-                print(utilities.hex_dump(dump, address),)
+                print((utilities.hex_dump(dump, address),))
 
         if opt == '--dump-rom':
             device = dfu.acquire_device()

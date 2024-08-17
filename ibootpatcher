@@ -84,10 +84,10 @@ def apply_tcr_el3_patch(binary):
       binary = binary[:i] + arm64_branch_instruction(i, 0x1EC) + binary[i+4:]
       binary = binary[:0x1EC] + ORR_X0_X0_0x10000000 + ORR_X0_X0_0x800000 + MSR_TCR_EL1_X0 + ISB + RET + binary[0x200:]
 
-      print 'TCR_EL3 patch: 0x%x' % i
+      print('TCR_EL3 patch: 0x%x' % i)
       return binary
 
-  print 'ERROR: Could not find MSR TCR_EL3, X0 instruction.'
+  print('ERROR: Could not find MSR TCR_EL3, X0 instruction.')
   sys.exit(1)
 
 def apply_generic_el3_patches(binary):
@@ -120,7 +120,7 @@ def apply_generic_el3_patches(binary):
     for (before, after) in el3_patches:
       if binary[i:i+4] == before:
         binary = binary[:i] + after + binary[i+4:]
-        print 'Generic EL3 patch: 0x%x' % i
+        print('Generic EL3 patch: 0x%x' % i)
         break
 
   return binary
@@ -139,6 +139,6 @@ if __name__ == '__main__':
       filename = args.i + '.patched'
       with open(filename, 'wb') as out:
         out.write(binary)
-      print 'Saved:', filename
+      print('Saved:', filename)
   else:
-    print 'No patches requested.'
+    print('No patches requested.')
