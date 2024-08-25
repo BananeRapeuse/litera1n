@@ -2,8 +2,6 @@
 
 # litera1n
 
-ACTYALY NOT WORKING (you may got a lot of errors we are try to patch)
-
 An iOS/iPadOS/tvOS Jailbreak for all A5-A11 devices using the checkm8 exploit.
  
 For libusb errors, refer to this guide: ["Click here"](https://www.smallcab.net/download/programme/xm-07/how-to-install-libusb-driver.pdf)
