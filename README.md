@@ -45,7 +45,7 @@ all the testers will be added in the `"thanks to"` part of the [official website
 # TO DO:
 - [ ] Make the GUI better
 
-# Insrallation and jailbreaking process:
+# Installation and jailbreaking process:
 ### RUN ALL OF THIS USING ADMIN COMMAND PROMPT
 ## Preinstall
 git from https://git-scm.com/
