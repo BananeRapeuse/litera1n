@@ -75,6 +75,7 @@ in `main.py`, type `1` for a command line jailbreak or `2` for a bad GUI jailbre
 # Troubleshooting:
 1. restart your computer at least 3 times after installing drivers
 2. re-try the jailbreak
+3. With A9 devices, if you get stuck at the "Checkra1n boot" type `Ctrl+C` in the command promt or unplug and replug the phone
 
 # Errors:
  **1.** 
@@ -89,7 +90,7 @@ usb.core.NoBackendError: No backend available
  
 (also remember to install python with this error)
 
-_with this error you must read the #must do section_
+_with this error you must read the #must do section_ **(it is possible you encounter problemes with all the dependencies installed, for moment we don't have find how to fix this issue, please re-try on a other computer (the only way to "fix" the issue))**
 
 # Credits:
 - [axi0mX](https://github.com/axi0mx) for the checkm8 exploit, ipwndfu and the checkm8 description
