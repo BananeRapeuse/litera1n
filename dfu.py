@@ -1,10 +1,7 @@
-# Original author: axi0mX
-# Modder: Ph0qu3_111
-
 import sys, time
 import usb # pyusb: use 'pip install pyusb' to install this module
 import usb.backend.libusb1
-import libusbfinder # type: ignore
+import libusbfinder
 
 MAX_PACKET_SIZE = 0x800
 
@@ -22,7 +19,7 @@ def acquire_device(timeout=5.0, match=None, fatal=True):
           return device
       time.sleep(0.001)
   if fatal:
-      print(('ERROR: No Apple device in DFU Mode 0x1227 detected after %0.2f second timeout. Exiting.') % timeout)
+      print ('ERROR: No Apple device in DFU Mode 0x1227 detected after %0.2f second timeout. Exiting.') % timeout
       sys.exit(1)
   return None
 
