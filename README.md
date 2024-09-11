@@ -43,7 +43,7 @@ all the testers will be added in the `"thanks to"` part of the [official website
 - Open source
 
 # TO DO:
-- [ ] Make the GUI better
+- ~~[x] Make the GUI better~~
 - [ ] Make the DFU Tool better
 
 # Installation and jailbreaking process:
