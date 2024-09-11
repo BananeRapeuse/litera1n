@@ -1,2 +1,5 @@
 pyusb
 libusb1
+pillow
+requests
+libusb
