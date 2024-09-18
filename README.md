@@ -95,5 +95,5 @@ _with this error you must read the #must do section_ **(it is possible you encou
 
 # Credits:
 - [axi0mX](https://github.com/axi0mx) for the checkm8 exploit, ipwndfu and the checkm8 description
-- [Kim Jong Cracks](https://github.com/KJCracks) for checkra1n
+- [Checkra1n](https://github.com/checkra1n) for checkra1n
 - [walac](https://github.com/walac) for pyusb
