@@ -1,4 +1,4 @@
-<img src="litera1n.png" alt="logo">
+<img src="litera1n_banner.jpeg" alt="logo">
 
 # litera1n
 
