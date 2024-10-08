@@ -44,7 +44,7 @@ all the testers will be added in the `"thanks to"` part of the [official website
 
 # TO DO:
 - ~~[x] Make the GUI better~~
-- [ ] Make the DFU Tool better
+- [ ] Make a working DFU Tool
 
 # Installation and jailbreaking process:
 ### RUN ALL OF THIS USING ADMIN COMMAND PROMPT
