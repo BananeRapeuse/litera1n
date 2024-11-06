@@ -8,28 +8,27 @@ import alloc8, checkm8, image3_24Kpwn, limera1n, SHAtter, steaks4uce, usbexec
 from dfuexec import *
 
 def print_help():
-    print 'USAGE: ipwndfu [options]'
-    print 'Interact with an iOS device in DFU Mode.\n'
-    print 'Basic options:'
-    print '  -p\t\t\t\tUSB exploit for pwned DFU Mode'
-    print '  -x\t\t\t\tinstall alloc8 exploit to NOR'
-    print '  -f file\t\t\tsend file to device in DFU Mode'
-    print 'Advanced options:'
-    print '  --demote\t\t\tdemote device to enable JTAG'
-    print '  --boot\t\t\tboot device'
-    print '  --dump=address,length\t\tdump memory to stdout'
-    print '  --hexdump=address,length\thexdump memory to stdout'
-    print '  --dump-rom\t\t\tdump SecureROM'
-    print '  --dump-nor=file\t\tdump NOR to file'
-    print '  --flash-nor=file\t\tflash NOR (header and firmware only) from file'
-    print '  --24kpwn\t\t\tinstall 24Kpwn exploit to NOR'
-    print '  --remove-24kpwn\t\tremove 24Kpwn exploit from NOR'
-    print '  --remove-alloc8\t\tremove alloc8 exploit from NOR'
-    print '  --decrypt-gid=hexdata\t\tAES decrypt with GID key'
-    print '  --encrypt-gid=hexdata\t\tAES encrypt with GID key'
-    print '  --decrypt-uid=hexdata\t\tAES decrypt with UID key'
-    print '  --encrypt-uid=hexdata\t\tAES encrypt with UID key'
-
+    print ('USAGE: ipwndfu [options]')
+    print ('Interact with an iOS device in DFU Mode.\n')
+    print ('Basic options:')
+    print ('  -p\t\t\t\tUSB exploit for pwned DFU Mode')
+    print ('  -x\t\t\t\tinstall alloc8 exploit to NOR')
+    print ('  -f file\t\t\tsend file to device in DFU Mode')
+    print ('Advanced options:')
+    print ('  --demote\t\t\tdemote device to enable JTAG')
+    print ('  --boot\t\t\tboot device')
+    print ('  --dump=address,length\t\tdump memory to stdout')
+    print ('  --hexdump=address,length\thexdump memory to stdout')
+    print ('  --dump-rom\t\t\tdump SecureROM')
+    print ('  --dump-nor=file\t\tdump NOR to file')
+    print ('  --flash-nor=file\t\tflash NOR (header and firmware only) from file')
+    print ('  --24kpwn\t\t\tinstall 24Kpwn exploit to NOR')
+    print ('  --remove-24kpwn\t\tremove 24Kpwn exploit from NOR')
+    print ('  --remove-alloc8\t\tremove alloc8 exploit from NOR')
+    print ('  --decrypt-gid=hexdata\t\tAES decrypt with GID key')
+    print ('  --encrypt-gid=hexdata\t\tAES encrypt with GID key')
+    print ('  --decrypt-uid=hexdata\t\tAES decrypt with UID key')
+    print ('  --encrypt-uid=hexdata\t\tAES encrypt with UID key')
 if __name__ == '__main__':
     try:
         advanced = ['demote', 'boot', 'dump=', 'hexdump=', 'dump-rom', 'dump-nor=', 'flash-nor=', '24kpwn', 'remove-24kpwn', 'remove-alloc8', 'decrypt-gid=', 'encrypt-gid=', 'decrypt-uid=', 'encrypt-uid=']

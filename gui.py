@@ -246,7 +246,7 @@ class Litera1nApp:
     def run_jailbreak_command(self):
         """Exécute la commande de jailbreak"""
         try:
-            subprocess.run(["python", "ipwndfu", "-p"], check=True)
+            subprocess.run(["python ipwndfu -p"], check=True)
         except subprocess.CalledProcessError as e:
             messagebox.showerror("Error", f"Command failed: {e}")
 
